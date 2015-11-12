@@ -5,19 +5,19 @@
 
 @font-face {
   font-family: 'Candela';
-  src: font-url('candelabook-webfont.eot');
-  src: font-url('candelabook-webfont.eot?') format('embedded-opentype'),
-       font-url('candelabook-webfont.woff') format('woff'),
-       font-url('candelabook-webfont.ttf') format('truetype');
+  src: font-url('candelabook.eot');
+  src: font-url('candelabook.eot?') format('embedded-opentype'),
+       font-url('candelabook.woff') format('woff'),
+       font-url('candelabook.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Roboto Light';
-  src: font-url('Roboto-Light-webfont.eot');
-  src: font-url('Roboto-Light-webfont.eot?') format('embedded-opentype'),
-       font-url('Roboto-Light-webfont.woff') format('woff'),
-       font-url('Roboto-Light-webfont.ttf') format('truetype');
+  src: font-url('robotolight.eot');
+  src: font-url('robotolight.eot?') format('embedded-opentype'),
+       font-url('robotolight.woff') format('woff'),
+       font-url('robotolight.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -53,8 +53,6 @@
           border-bottom-left-radius: $radius;
 }
 
-$accent-font: 'Candela';
-$main-font: 'Roboto Light';
 $lightbtn-bg: #E3E9FF;
 $lightbtn-border: 1 px solid #C0CDEA;
 $lightbtn-color: #5E6669;
@@ -79,10 +77,10 @@ p {
 body {
   background-color: rgba(255, 245, 223, 1);
   color: #5E6669;
-  font-family: $main-font;
+  font-family: 'Candela';
 }
 h1 {
-  font-family: $accent-font;
+  font-family: 'Roboto Light';
   font-size: 33px;
 }
 h4 {
@@ -163,7 +161,7 @@ h1.signup {
 /* Edit account: cancel */
 h3.second {
   margin-top: 50px;
-  font-family: $accent-font;
+  font-family: 'Candela';
 }
 
 /* Devise error explanation */
@@ -191,7 +189,7 @@ h3.second {
 .navbar {
   background-color: #39529C;
   padding-bottom: 8px;
-  font-family: $accent-font;
+  font-family: 'Candela';
 }
 .navbar .nav > li > a {
   color: rgba(255,255,255,0.7);
