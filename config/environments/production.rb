@@ -82,6 +82,6 @@ Rails.application.configure do
   config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
   config.assets.compile = true
   config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
-  config.assets.precompile += %w( .svg .eot .woff .tff )
+  config.assets.precompile << /\.(?:svg|eot|woff|ttf)\z/
 
 end
