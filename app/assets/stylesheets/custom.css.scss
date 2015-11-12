@@ -5,19 +5,19 @@
 
 @font-face {
   font-family: 'Candela';
-  src: font-url('/assets/candelabook-webfont.eot');
-  src: font-url('/assets/candelabook-webfont.eot?') format('embedded-opentype'),
-       font-url('/assets/candelabook-webfont.woff') format('woff'),
-       font-url('/assets/candelabook-webfont.ttf') format('truetype');
+  src: font-url('candelabook-webfont.eot');
+  src: font-url('candelabook-webfont.eot?') format('embedded-opentype'),
+       font-url('candelabook-webfont.woff') format('woff'),
+       font-url('candelabook-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Roboto Light';
-  src: font-url('/assets/Roboto-Light-webfont.eot');
-  src: font-url('/assets/Roboto-Light-webfont.eot?') format('embedded-opentype'),
-       font-url('/assets/Roboto-Light-webfont.woff') format('woff'),
-       font-url('/assets/Roboto-Light-webfont.ttf') format('truetype');
+  src: font-url('Roboto-Light-webfont.eot');
+  src: font-url('Roboto-Light-webfont.eot?') format('embedded-opentype'),
+       font-url('Roboto-Light-webfont.woff') format('woff'),
+       font-url('Roboto-Light-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

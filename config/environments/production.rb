@@ -77,8 +77,11 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
+  # A bunch of desperate measures to try to force heroku to load assets
   config.serve_static_assets = true
-config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
-config.assets.compile = true
+  config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect'
+  config.assets.compile = true
+  config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+  config.assets.precompile += %w( .svg .eot .woff .tff )
 
 end
