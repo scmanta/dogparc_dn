@@ -1,27 +1,41 @@
 <div class="row">
-  <div class="col-md-8 col-md-offset-2">
+  <div class="col-xs-12">
+    <div class="well" id="intro">
+    <h1>Dogparc Community</h1>
+    <p>In order to be listed, users must have a full account, fill out a profile, and be local to Denver.</p>
+    
     <ul class="list-unstyled">
       <% @users.each do |user| %>
         <% if user.profile %>
+
         <li>
-          <div class="well row <%= cycle('white-bg', '') %>">
-            <div class="col-sm-4 text-center">
+
+          <div class="well" id="user">
+
+            <div class="col-sm-3">
               <% if user.profile.avatar %>
                 <%= link_to user do %>
-                  <%= image_tag user.profile.avatar.url(:thumb), class: 'user-index-avatar' %>
+                    <%= image_tag user.profile.avatar.url(:thumb), class: 'user-index-avatar' %>
+                  <% end %>
                 <% end %>
-              <% end %>
-            </div>
+              </div>
+
             <div>
               <%= link_to user do %>
                 <h2><%= user.profile.first_name %> <%= user.profile.last_name %></h2>
               <% end %>
-              <p><%= user.profile.job_title %>
+              <p>
+                <%= user.profile.job_title %> 
+              </p>
             </div>
+
           </div>
+
         </li>
+
         <% end %>
       <% end %>
     </ul>
   </div>
+</div>
 </div>
