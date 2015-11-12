@@ -3,24 +3,8 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-@font-face {
-  font-family: 'Candela';
-  src: font-url('candelabook.eot');
-  src: font-url('candelabook.eot?') format('embedded-opentype'),
-       font-url('candelabook.woff') format('woff'),
-       font-url('candelabook.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Roboto Light';
-  src: font-url('robotolight.eot');
-  src: font-url('robotolight.eot?') format('embedded-opentype'),
-       font-url('robotolight.woff') format('woff'),
-       font-url('robotolight.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+@import url('//fonts.googleapis.com/css?family=Quicksand:700');
+@import url('//fonts.googleapis.com/css?family=Nunito: 300');
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -77,17 +61,21 @@ p {
 body {
   background-color: rgba(255, 245, 223, 1);
   color: #5E6669;
-  font-family: 'Candela';
+  font-family: 'Roboto';
+  font-weight: 300;
 }
 h1 {
-  font-family: 'Roboto Light';
+  font-family: 'Quicksand';
   font-size: 33px;
 }
 h4 {
-  font-weight: bold;
+  font-weight: 300;
 }
 .container {
   max-width: 1000px;
+}
+.btn.btn-default.btn-lg.btn-block {
+  font-weight: 300;
 }
 
 /* Buttons */
@@ -107,6 +95,7 @@ input[type="submit"].btn-block:hover, input[type="reset"].btn-block:hover, input
 .wellhead h2{
   margin: 0;
   font-size: 1.4em;
+  font-weight: 300;
   background-color: #6078BF;
   border: 1px solid #8B9BCA;
   padding: 10px;
@@ -126,6 +115,7 @@ input[type="submit"].btn-block:hover, input[type="reset"].btn-block:hover, input
   background-color: $lightbtn-bg; 
   margin: 15px;
   border: $lightbtn-border;
+  font-weight: 300;
 }
 .well#signed-in .btn.btn-default.btn-lg.btn-block:hover, .well#signed-out .btn.btn-default.btn-lg.btn-block:hover {
   background-color: #DAE0F7;
@@ -161,7 +151,7 @@ h1.signup {
 /* Edit account: cancel */
 h3.second {
   margin-top: 50px;
-  font-family: 'Candela';
+  font-family: 'Quicksand';
 }
 
 /* Devise error explanation */
@@ -189,7 +179,7 @@ h3.second {
 .navbar {
   background-color: #39529C;
   padding-bottom: 8px;
-  font-family: 'Candela';
+  font-family: 'Quicksand';
 }
 .navbar .nav > li > a {
   color: rgba(255,255,255,0.7);
@@ -341,6 +331,7 @@ p.caption {
   background-color: $lightbtn-bg; 
   border: $lightbtn-border;
   margin-top: 18px;
+  font-weight: 300;
 }
 
 /* Home page */
