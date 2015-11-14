@@ -1,9 +1,12 @@
 <div class="row">
   <div class="col-xs-12">
+    <div class="wellhead-main">
+        <h4>My Account</h4>
+      </div>
     <div class="well">
       <div class="row">
           <div class="col-md-6 col-md-offset-3">
-    <h1>Edit <%= resource_name.to_s.humanize %></h1>
+    <h3>Edit Account Information</h3>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= devise_error_messages! %>
       <div class="field form-group">

@@ -4,7 +4,7 @@
 @import "font-awesome";
 
 @import url('//fonts.googleapis.com/css?family=Quicksand:700');
-@import url('//fonts.googleapis.com/css?family=Nunito: 300');
+@import url('//fonts.googleapis.com/css?family=Work+Sans: 400,700,300');
 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
@@ -59,23 +59,21 @@ p {
   font-size: 1.1em;
 }
 body {
-  background-color: rgba(255, 245, 223, 1);
+  background-image: url('/assets/bg.png');
   color: #5E6669;
-  font-family: 'Roboto';
-  font-weight: 300;
+  font-family: 'Work Sans', sans-serif;
 }
 h1 {
-  font-family: 'Quicksand';
+  font-family: 'Quicksand', sans-serif;
   font-size: 33px;
 }
 h4 {
-  font-weight: 300;
 }
 .container {
   max-width: 1000px;
 }
 .btn.btn-default.btn-lg.btn-block {
-  font-weight: 300;
+  color: #626A6D;
 }
 
 /* Buttons */
@@ -95,18 +93,29 @@ input[type="submit"].btn-block:hover, input[type="reset"].btn-block:hover, input
 .wellhead h2{
   margin: 0;
   font-size: 1.4em;
-  font-weight: 300;
   background-color: #6078BF;
-  border: 1px solid #8B9BCA;
+  border: 1px solid #596FB1;
   padding: 10px;
   color: #fff;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-.well#signed-in, .well#signed-out {
-  padding: 0;
+.wellhead-main {
+  margin: 0;
+  background-color: #6078BF;
+  border: 1px solid #596FB1;
+  padding: 10px 0px 10px 15px;
+  color: #fff;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.well {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
+      border: 1px solid #CCCCCC;
+}
+.well#signed-in, .well#signed-out {
+  padding: 0;
 }
 .well#signed-in p, .well#signed-out p {
   margin: 15px;
@@ -115,7 +124,6 @@ input[type="submit"].btn-block:hover, input[type="reset"].btn-block:hover, input
   background-color: $lightbtn-bg; 
   margin: 15px;
   border: $lightbtn-border;
-  font-weight: 300;
 }
 .well#signed-in .btn.btn-default.btn-lg.btn-block:hover, .well#signed-out .btn.btn-default.btn-lg.btn-block:hover {
   background-color: #DAE0F7;
@@ -149,23 +157,23 @@ h1.signup {
 }
 
 /* Edit account: cancel */
+
 h3.second {
   margin-top: 50px;
-  font-family: 'Quicksand';
 }
 
 /* Devise error explanation */
 #error_explanation {
   @include border-radius(4px);
-  color: lightbtn-color;
-  background-color: $lightbtn-bg;
-  border: $lightbtn-border;
+  color: #6B83BB;
+  background-color: #ffffff;
+  border: 1px solid #DBE1EF;
   padding: 15px;
   margin-bottom: 15px;
   margin-top: 15px;
 }
-#error_explanation ol {
-  padding-left: 19px;
+#error_explanation ul {
+  padding-left: 17px;
 }
 
 
@@ -179,17 +187,18 @@ h3.second {
 .navbar {
   background-color: #39529C;
   padding-bottom: 8px;
-  font-family: 'Quicksand';
+  font-family: 'Quicksand', sans-serif;
 }
 .navbar .nav > li > a {
   color: rgba(255,255,255,0.7);
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 .navbar-btn {
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 .navbar-default .navbar-brand {
   font-size: 2.05em;
+  display: inline-block;
 }
 .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus, 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar {
@@ -221,6 +230,10 @@ h3.second {
 .btn.btn-primary.navbar-btn:hover {
   background-color:#7D97E4;
   border-color: $medblue;
+}
+
+.nav.navbar-nav.navbar-right {
+  font-family: 'Work Sans', sans-serif;
 }
 
 @media only screen and (max-width: 768px) { 
@@ -290,18 +303,23 @@ footer ul.foot {
     margin: 0 auto;
   }
 }
+#about.col-xs-12 {
 
+}
 #about {
   @include border-top-right-radius(4px);
   @include border-top-left-radius(4px);
   background-color: $lightbtn-bg;
   margin-bottom: 30px;
-  border: $lightbtn-border;
+  border: 1px solid #c0cdea;
 }
 #about h2 {
   text-align: center;
   line-height: 1.5em;
   padding: 20px;
+}
+#aboutdesc h4 {
+  font-size: 1.5em;
 }
 #aboutdesc {
   margin-bottom: 10px;
@@ -327,16 +345,23 @@ p.caption {
   text-align: center;
   max-width: 520px;
 }
+#aboutimg img {
+  @include border-top-right-radius(4px);
+  @include border-top-left-radius(4px);
+}
 #aboutdesc .btn {
   background-color: $lightbtn-bg; 
   border: $lightbtn-border;
   margin-top: 18px;
-  font-weight: 300;
+}
+#aboutdesc .btn:hover {
+  background-color: #DAE0F7;
 }
 
 /* Home page */
 .carousel {
   margin-bottom: 25px;
+  
 }
 .carousel .item {
   @include border-radius(4px);
@@ -369,6 +394,9 @@ p.caption {
 }
 #user.well {
     background-color: aliceblue;
+}
+#user.well a:hover {
+  text-decoration: none;
 }
 #proftop.col-sm-9 h4,#proftop.col-sm-9 h3{
     margin-bottom: 1.3em;
